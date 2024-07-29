@@ -5,7 +5,6 @@ This Terraform module creates an Azure Resource Group with a generated name usin
 ```hcl
 provider "azurerm" {
   features {}
-  version = "~> 3.0"  # Adjust as per your requirements
 }
 
 module "resource_group" {
@@ -14,7 +13,7 @@ module "resource_group" {
   location       = var.location
   tags           = var.tags
   lock_level     = var.lock_level
-  org_prefix    = var.org_prefix
+  org_prefix     = var.org_prefix
   env            = var.env
   project        = var.project
   resource_type  = var.resource_type
